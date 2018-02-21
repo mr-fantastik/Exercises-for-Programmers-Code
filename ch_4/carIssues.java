@@ -14,7 +14,7 @@ public class carIssues {
 		String input;
 		/*
 		 This is the most horrendous series of nested if/else statements.
-		 Which goes five layers deep.
+		 Which goes five levels deep.
 		 Maybe there are worse things in life, but I'm not sure.
 		 */
 		System.out.println("Is the car silent when turning the key?");

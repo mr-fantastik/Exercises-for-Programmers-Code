@@ -1,4 +1,4 @@
-
+package ch_2;
 public class LenCon {
 
 	public static void main(String[] args) {

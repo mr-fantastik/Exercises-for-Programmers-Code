@@ -32,6 +32,6 @@ public class Compund_Interest {
 		
 
 		System.out.println("$" + String.format("%.2f", compound) +" in total.");
-		
+	sc.close();	
 	}
 }

@@ -1,3 +1,4 @@
+package ch_2;
 import java.util.Scanner;
 
 class MoonGrav {
