@@ -58,7 +58,7 @@ public class carIssues {
 				}
 			}
 		}
-
+sc.close();
 	}
 
 }
