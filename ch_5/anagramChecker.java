@@ -13,7 +13,7 @@ public class anagramChecker {
 	/*
 	 This is the most batshit crazy function, and I have no idea why it works,
 	 but it returns 'true' if the two strings are anagrams of each other
-	 and false if they are not.
+	 and 'false' if they are not.
 	 */
 	
 	public static boolean isAnagram(String string1, String string2, 
