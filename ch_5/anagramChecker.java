@@ -16,8 +16,10 @@ public class anagramChecker {
 	 and 'false' if they are not.
 	 */
 	
-	public static boolean isAnagram(String string1, String string2, 
-			int countUp, int countDown) {
+	public static boolean isAnagram(String string1, String string2) {		
+		int countUp=0;
+		int countDown = string2.length()-1;
+		
 		//initial check to see the two strings are the same length
 		if(string1.length() != string2.length())  return false;
 		
@@ -37,8 +39,8 @@ public class anagramChecker {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String string1 = null;
-		String string2 = null;
+		String string1;
+		String string2;
 
 		
 		System.out.println("Enter a string");
@@ -47,14 +49,13 @@ public class anagramChecker {
 		System.out.println("Enter another string");
 		string2 = sc.nextLine();
 		
-		int countUp=0;
-		int countDown = string2.length()-1;
+
 		
 		/*
 		 isAnagram is called, and conditional checks for a 'true' value
 		 otherwise outputs 'false'
 		 */
-		if(isAnagram(string1, string2, countUp, countDown) == true) 
+		if(isAnagram(string1, string2) == true) 
 			System.out.println("True");
 		else 
 			System.out.println("false");
