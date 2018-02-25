@@ -41,7 +41,6 @@ public class anagramChecker {
 		
 		String string1;
 		String string2;
-
 		
 		System.out.println("Enter a string");
 		string1 = sc.nextLine();
