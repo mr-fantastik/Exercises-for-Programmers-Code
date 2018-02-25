@@ -20,8 +20,8 @@ public class passwordStrength {
 	//pwStrength() method returns an int based on a String and regex comparisons		
 	public static int pwStrength(String string) {
 		
-		if (string.matches("^\\d{0,7}$")) {return 1;}
-		else if (string.matches("^[a-zA-Z]{0,7}$")) {return 2;}
+		if (string.matches("^\\d{1,7}$")) {return 1;}
+		else if (string.matches("^[a-zA-Z]{1,7}$")) {return 2;}
 		else if (string.matches("^[a-zA-Z\\d]{8,15}$")) {return 3;}
 		else if (string.matches("^[a-zA-Z\\d\\D]{8,15}$")) {return 4;}
 		else return 0;
@@ -32,11 +32,11 @@ public class passwordStrength {
 		
 		String string;
 		
-		//loops until user inputs a string between 0 & 15 characters
+		//loops until user inputs a string between 1 & 15 characters
 		do {
 		System.out.println("Enter a string within 15 characters");
 		string = sc.nextLine();
-		} while((string.length() < 0) || (string.length() > 15));
+		} while((string.length() < 1) || (string.length() > 15));
 		
 		//switch statement outputs based on pwStrength()'s return value
 		switch (pwStrength(string)) {
