@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class debtCalc {
 	
-	public static double timeToPayOff(double APR, double balance, double payment){
+	/*
+	 * calculateMonthsUntilPaidOff receives an APR, balance, and payment as input, and calculates
+	 * the # of months required to payoff the balance given the APR and payment.
+	 * Had to reach out to S.O. for help on this, as I was using an 'int' for division, which meant I
+	 * was dividing by zero, and had some misplaced brackets in the calculation.
+	 */
+	public static double calculateMonthsUntilPaidOff(double APR, double balance, double payment){
 		double months;
 		APR /= 36500.0;
 		
@@ -18,6 +24,7 @@ public class debtCalc {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		//variables
 		double APR, balance, payment;
 		
 		System.out.println("Input balance");
@@ -27,8 +34,8 @@ public class debtCalc {
 		System.out.println("Input payment");
 		payment = sc.nextDouble();
 		
-
-		System.out.println((int)Math.ceil(debtCalc.timeToPayOff(APR, balance, payment)));
+		//output rounds-up 'months' using Math.ceil and then casts the return to an 'int'
+		System.out.println((int)Math.ceil(debtCalc.calculateMonthsUntilPaidOff(APR, balance, payment)));
 
 		
 		sc.close();
