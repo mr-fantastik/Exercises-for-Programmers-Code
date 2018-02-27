@@ -6,9 +6,9 @@ public class debtCalc {
 	
 	public static double timeToPayOff(double APR, double balance, double payment){
 		double months;
-		APR /= 36500.00;
+		APR /= 36500.0;
 		
-		months = (-1/30.0) * Math.log(1 + ((balance/payment) * (1 - (Math.pow((1 + APR), 30)))))
+		months = (-1.0/30.0) * Math.log(1 + ((balance/payment) * (1 - (Math.pow((1 + APR), 30)))))
 				/Math.log(1 + APR);
 
 		return months;
@@ -28,7 +28,7 @@ public class debtCalc {
 		payment = sc.nextDouble();
 		
 
-		System.out.println(Math.nextUp(debtCalc.timeToPayOff(APR, balance, payment)));
+		System.out.println((int)Math.ceil(debtCalc.timeToPayOff(APR, balance, payment)));
 
 		
 		sc.close();
