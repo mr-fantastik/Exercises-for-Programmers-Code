@@ -50,13 +50,16 @@ public class inputsValidator {
 	}
 	
 	public static void checkAll(String firstName, String lastName, String zip, String ID) {
+		if((firstCheck(firstName) || lastCheck(lastName) || zipCheck(zip) || idCheck(ID)) != true) {
+			
+		} else {System.out.println("All good!");}
+			
+			/*
 			firstCheck(firstName);
 			lastCheck(lastName);
 			zipCheck(zip);
 			idCheck(ID);
-		if(firstCheck(firstName)==true && lastCheck(lastName)==true && zipCheck(zip)==true && idCheck(ID)==true) {
-			System.out.println("All good!");
-		}
+			*/
 	}
 
 
@@ -72,9 +75,7 @@ public class inputsValidator {
 		System.out.println("Enter a zip code:");
 		zip = sc.nextLine();
 		System.out.println("Enter an ID code:");
-		ID = sc.nextLine();
-		
-		
+		ID = sc.nextLine();		
 		
 		checkAll(firstName, lastName, zip, ID);
 
