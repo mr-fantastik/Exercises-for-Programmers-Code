@@ -14,10 +14,9 @@ public class numbersGame {
 		Scanner sc = new Scanner(System.in);
 		
 		String upperLimit;
-		int high;
+		int high, random;
 		int low = 0, guess = 0,  wrong_guess = 0;
-		int random;
-		
+
 		Random r = new Random();
 		
 		System.out.println("Let's play a number game!");
@@ -51,6 +50,7 @@ public class numbersGame {
 					System.out.println("too low!");
 				} else if (guess > random) {
 					System.out.println("too high!");
+					wrong_guess ++;
 				}			
 			} else {
 				System.out.println("Invalid guess");
@@ -60,7 +60,8 @@ public class numbersGame {
 		} while(guess != random);
 		
 		System.out.printf("Congrats!%n" + "You had " + wrong_guess + " wrong guesses");
-
+		
+		sc.close();
 	}
 
 }
