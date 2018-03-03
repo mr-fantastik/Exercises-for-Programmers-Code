@@ -13,7 +13,6 @@
 package ch_5;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class passwordStrength {
 	
