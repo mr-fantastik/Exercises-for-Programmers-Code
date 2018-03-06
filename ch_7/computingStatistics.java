@@ -6,8 +6,6 @@
  */
 package ch_7;
 
-import java.awt.List;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -53,10 +51,10 @@ public class computingStatistics {
 		String input;
 		int num;
 		
-		/*
-		 * loops until 'input' == "done"
-		 * parses 'input' for integer values, storing them into ArrayList 'list'
-		 */
+		
+		 //loops until 'input' == "done"
+		 //parses 'input' for integer values, storing them into ArrayList 'list'
+		 
 		while (true) {
 			System.out.print("Enter a number:");
 			input = sc.nextLine();
@@ -69,7 +67,7 @@ public class computingStatistics {
 			}
 		}
 		
-		list.forEach(System.out::print);
+		list.forEach(System.out::println);
 		
 		doMath(list);
 
