@@ -24,7 +24,7 @@ public class passwordGenerator {
 		String lowerChars = upperChars.toLowerCase();
 		String alphabet = upperChars + lowerChars;
 		String numbers = "0123456789";
-		String specChars = "[^\\d]";
+		String specChars = "!@#$%^&*()_-+=<>?";
 		
 		//char[] length variables
 		int pwLength, numbersVar, specCharVar;
