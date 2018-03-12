@@ -22,11 +22,16 @@ import java.util.Scanner;
 
 public class filteringValues {
 	
+	//fileterEvenNumbers() takes a string 'input' and returns an ArrayList 'list'
+	//of integers '%2==0'
 	public static ArrayList<Integer> filterEvenNumbers(String input) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		
+		//inputArray[] contains values delimited by spaces
 		String[] inputArray = input.split("\\s+");
 		
+		//loops through inputArray adding values to ArrayList 'list' if the 
+		//parsed string is an integer '%2==0'
 		for (int i = 0; i < inputArray.length; i++) {
 			 String numberAsString = inputArray[i];
 			 if (Integer.parseInt(numberAsString) % 2 == 0) {
@@ -41,14 +46,16 @@ public class filteringValues {
 		
 		String input;
 		
+		//console 'input'
 		System.out.print("Enter a list of numbers, separated by spaces: ");
 		input = sc.nextLine();		
 		
+		//where the magic happens
 		ArrayList<Integer> numberList = filterEvenNumbers(input);
 		
+		//console output
 		numberList.forEach(System.out::println);
 	
 		sc.close();
 	}
-
 }

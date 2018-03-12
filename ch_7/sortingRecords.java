@@ -13,7 +13,11 @@ import java.util.List;
 		 * 
 		 * To sort an Object by its property, you have to make the Object implement the Comparable interface 
 		 * and override the compareTo() method
+		 * 
+		 * http://www.codejava.net/java-core/collections/sorting-a-list-by-multiple-attributes-example
 		 */
+	 
+	 	//model class
 		public static class employee{
 			private String firstName;
 			private String lastName;
@@ -28,6 +32,7 @@ import java.util.List;
 				this.startDate = startDate;
 			}
 			
+			//getters and setters
 			public String getfirstName() {
 				return firstName;
 			}
@@ -53,11 +58,20 @@ import java.util.List;
 				this.startDate = startDate;
 			}
 			
+			//override toString() provides meaningful info of 'employee' object
 			public String toString() {
 				return String.format("%s | %s | %s | %s", firstName, lastName, position, startDate);
 			}
 		}
 	
+	/*chained Comparator, takes a list of comparators passed via its constructor
+	 *the compare() method iterates over this comparators list 
+     *to compare two Employee objects by each individual comparator
+      
+	 *This is a chained comparator that is used to sort a list by multiple
+	 *attributes by chaining a sequence of comparators of individual fields
+	 *together.
+	 */
 	public static class EmployeeChainedComparator implements Comparator<employee>	{
 		private List<Comparator<employee>> listComparators;
 		
@@ -79,6 +93,7 @@ import java.util.List;
 
 	public static void main(String[] args) {
 		
+		//last name comparator
 		class EmployeeLastNameComparator implements Comparator<employee> {
 			 
 		    @Override
