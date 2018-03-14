@@ -21,12 +21,7 @@ public class magic8Ball {
 			input = sc.nextLine();
 			System.out.println(list[randInt]);
 			r.nextInt();
-		} while (!input.matches("exit"));
-
-
-
-		
-		
+		} while (!input.matches("exit"));	
 		
 			sc.close();
 	}

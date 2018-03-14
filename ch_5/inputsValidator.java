@@ -1,4 +1,9 @@
+/*
+ * This program did not meet per requirements,
+ * should be reworked!
+ */
 package ch_5;
+
 
 import java.util.Scanner;
 

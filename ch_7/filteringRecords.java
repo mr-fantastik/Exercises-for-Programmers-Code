@@ -1,10 +1,6 @@
 package ch_7;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-
-import ch_7.sortingRecords.employee;
 
 public class filteringRecords {
 	
@@ -15,6 +11,7 @@ public class filteringRecords {
 		private String position;
 		private String startDate;
 		
+		//class constructor
 		employee(String firstName, String lastName, String position, String startDate){
 			super();
 			this.firstName = firstName;
@@ -72,6 +69,9 @@ public class filteringRecords {
 		employees[4] = new employee("Jacquelyn", "Jackson", "DBA", "");		
 		employees[5] = new employee("Sally", "Weber", "Web Developer", "2015-12-18");		
 		
+		
+		//iterates over 'employees[]', outputting 'employee[i]' if String 'searchString'
+		//is contained within 'employees[i].firstName' or 'employees[i].lastName'
 		for(int i = 0; i < employees.length; i++) {
 			if(employees[i].getfirstName().contains(searchString)) {
 				System.out.println(employees[i]);
@@ -79,10 +79,8 @@ public class filteringRecords {
 			else if(employees[i].getlastName().contains(searchString)) {
 				System.out.println(employees[i]);
 			}
-		}
-		
-
-		
+		}		
+		sc.close();		
 	}
 
 }
