@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class parseDataFile {
@@ -15,23 +16,21 @@ public class parseDataFile {
 		
 		List<String> dataList = new ArrayList<String>();
 		
-		String[] array = new String[dataList.size()];
 		
 		try(BufferedReader br = new BufferedReader(new FileReader("dataFile.txt")))
 		
 		{
 			while((fileInput = br.readLine()) != null) {
-				dataList.add(fileInput);
+				dataList.add(fileInput.replaceAll(",", "  "));
 			}
 		} catch(IOException exc) {
 			System.out.println("I/O Error: " + exc);
 		}
-		dataList.toArray(array);
 		
-		//dataList.forEach(System.out::println);
+		System.out.println("Last  First  Salary");
+		System.out.println("-------------------");
 		
-		for(String element : array ) {
-			System.out.println(element);
-		}
+		dataList.forEach(System.out::println);
+		
 	}
 }
