@@ -21,7 +21,7 @@ public class parseDataFile {
 		try(BufferedReader br = new BufferedReader(new FileReader("dataFile.txt")))
 		
 		{
-			//loops until 'br' returns a null value
+			//loops until 'br' returns null
 			//'fileInput' is chained to 'replaceAll()',
 			//replacing "," with "   "
 			while((fileInput = br.readLine()) != null) {
