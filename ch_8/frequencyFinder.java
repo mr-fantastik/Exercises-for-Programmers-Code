@@ -17,6 +17,7 @@ public class frequencyFinder {
 		Scanner sc = new Scanner(new File("dummy.txt"));
 		Map<String, Integer> wordCounts = new TreeMap<String, Integer>();
 		
+		//counts occurrences and adds them to 'wordCount'
 		while(sc.hasNext()) {
 			String next = sc.next().toLowerCase();
 			if(!wordCounts.containsKey(next)) {
@@ -26,6 +27,7 @@ public class frequencyFinder {
 			}
 		}
 		
+		// console outputs disparate words and their frequencies
 		System.out.println("Number of words: " + wordCounts.size());
 		for(String word : wordCounts.keySet()) {
 			System.out.println("Word: " + word + " " + wordCounts.get(word));
