@@ -18,7 +18,7 @@ public class getWeather {
         sc.close();
 		
 		String urlString = "http://api.openweathermap.org/data/2.5/weather?q=" 
-		+ inputString + "&units=imperial&APPID=88b641ffa5f74c97364efda57bce60aa";
+		+ inputString + "&units=imperial&APPID=";
 		
 		URL aURL = new URL(urlString);
 		
